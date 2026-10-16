@@ -90,8 +90,4 @@ Tests were run in Remix and through the UI on Sepolia. Replace each cell with wh
 | Failed transaction 2| ![Compilation](screenshots/6_requestexisterror.png) |
 | Failed transaction 3| ![Compilation](screenshots/7_onlyadminerror.png) |
 | Failed transaction 4| ![Compilation](screenshots/8_schemenameerror.png) |
-| Failed transaction 5| ![Compilation](screenshots/5_amounterror.png |
-
-
-## 10. Security note
-No private keys, seed phrases or passwords are stored in this repository. Only test accounts on Sepolia were used.
+| Failed transaction 5| ![Compilation](screenshots/5_amounterror.png) |
