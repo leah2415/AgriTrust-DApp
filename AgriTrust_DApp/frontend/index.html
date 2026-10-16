@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AgriTrust | Subsidy Tracker</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/ethers@6.13.5/dist/ethers.umd.min.js"></script>
+</head>
+<body>
+  <header>
+    <div class="brand">🌱 AgriTrust</div>
+    <p>Transparent agricultural subsidy tracking on Ethereum</p>
+    <button id="connectBtn">Connect MetaMask</button>
+    <div id="wallet" class="muted">Wallet not connected</div>
+  </header>
+
+  <main>
+    <section class="panel">
+      <h2>Submit a subsidy request</h2>
+      <p class="muted">Your request is recorded on the blockchain and starts as Pending.</p>
+      <form id="requestForm">
+        <label>Farmer name<input id="farmerName" required maxlength="80" placeholder="e.g. Ravi Kumar"></label>
+        <label>Scheme name<input id="schemeName" required maxlength="100" placeholder="e.g. Seed Support Scheme"></label>
+        <label>Requested amount (ETH test units)<input id="amount" type="number" min="0.000001" step="0.000001" required placeholder="e.g. 0.01"></label>
+        <label>Purpose / details<textarea id="details" required maxlength="300" placeholder="Briefly describe the need"></textarea></label>
+        <button type="submit">Submit request</button>
+      </form>
+    </section>
+
+    <section class="panel">
+      <div class="heading-row">
+        <h2>Blockchain records</h2>
+        <button id="refreshBtn" class="secondary">Refresh records</button>
+      </div>
+      <p class="muted">Connect your wallet and configure the deployed contract address in app.js.</p>
+      <div id="message" role="status" aria-live="polite"></div>
+      <div id="records" class="records"><p class="muted">No records loaded yet.</p></div>
+    </section>
+
+    <section class="panel">
+      <h2>Admin actions</h2>
+      <p class="muted">Only the wallet that deployed the contract can approve or reject requests.</p>
+      <p id="adminInfo">Admin status will appear after connecting.</p>
+    </section>
+  </main>
+  <footer>Educational demo • Use a local Ganache blockchain or test network only.</footer>
+  <script src="app.js"></script>
+</body>
+</html>
