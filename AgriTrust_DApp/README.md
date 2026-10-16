@@ -67,19 +67,17 @@ Etherscan link: `https://sepolia.etherscan.io/address/0x44458E5e3a7ab08Dc835ef55
 ## 8. Test cases and observed results
 Tests were run in Remix and through the UI on Sepolia. Replace each cell with what you actually observed.
 
-| ID | Type | Test | Expected | Observed result | Tx hash |
-|----|------|------|----------|-----------------|---------|
-| T1 | Valid | Submit request with all fields, amount > 0 | Success, status Pending | <fill> | <hash> |
-| T2 | Valid | Admin approves a Pending request | Success, status Approved | <fill> | <hash> |
-| T3 | Invalid | Empty farmer name | Revert: Farmer name is required | <fill> | <hash> |
-| T4 | Invalid | Empty scheme name | Revert: Scheme name is required | <fill> | <hash> |
-| T5 | Invalid | Amount = 0 | Revert: Amount must be greater than zero | <fill> | <hash> |
-| T6 | Invalid | Empty details | Revert: Details are required | <fill> | <hash> |
-| T7 | Unauthorized | Non-admin calls `updateStatus` | Revert: Only admin can perform this action | <fill> | <hash> |
-| T8 | Invalid | `updateStatus` / `getRequest` with an ID that does not exist | Revert: Request does not exist | <fill> | <hash> |
+| ID | Type | Test | Expected | Observed result |
+|----|------|------|----------|-----------------|
+| T1 | Valid | Submit request with all fields, amount > 0 | Success, status Pending | Success, status Pending | 
+| T2 | Valid | Admin approves a Pending request | Success, status Approved | Success, status Approved | 
+| T3 | Invalid | Empty farmer name | Revert: Farmer name is required | Revert: Farmer name is required | 
+| T4 | Invalid | Empty scheme name | Revert: Scheme name is required | Revert: Scheme name is required | 
+| T5 | Invalid | Amount = 0 | Revert: Amount must be greater than zero | Revert: Amount must be greater than zero | 
+| T6 | Invalid | Empty details | Revert: Details are required | Revert: Details are required  | 
+| T7 | Unauthorized | Non-admin calls `updateStatus` | Revert: Only admin can perform this action | Revert: Only admin can perform this action |
+| T8 | Invalid | `updateStatus` / `getRequest` with an ID that does not exist | Revert: Request does not exist | Revert: Request does not exist | 
 | T9 | Invalid | Update an already processed request | Revert: Request already processed | Not tested | n/a |
-
-(Delete any row you did not run, or write "Not tested". Do not record results you did not observe.)
 
 ## 9. Screenshots
 | Requirement | File |
@@ -87,7 +85,7 @@ Tests were run in Remix and through the UI on Sepolia. Replace each cell with wh
 | Smart contract compilation | `screenshots/1_compile.png` |
 | Smart contract deployment | `screenshots/2_deploy.png` |
 | MetaMask wallet connection | `screenshots/3_walletconnected.png` |
-| Successful transaction | `screenshots/4_request.png` |
+| Successful transaction | `![Compilation](screenshots/4_request.png)` |
 | Failed transaction 1| `screenshots/5_farmernameerror.png` |
 | Failed transaction 2| `screenshots/6_requestexisterror.png` |
 | Failed transaction 3| `screenshots/7_onlyadminerror.png` |
