@@ -82,17 +82,16 @@ Tests were run in Remix and through the UI on Sepolia. Replace each cell with wh
 ## 9. Screenshots
 | Requirement | File |
 |-------------|------|
-| Smart contract compilation | `screenshots/1_compile.png` |
-| Smart contract deployment | `screenshots/2_deploy.png` |
-| MetaMask wallet connection | `screenshots/3_walletconnected.png` |
-| Successful transaction | `![Compilation](screenshots/4_request.png)` |
-| Failed transaction 1| `screenshots/5_farmernameerror.png` |
-| Failed transaction 2| `screenshots/6_requestexisterror.png` |
-| Failed transaction 3| `screenshots/7_onlyadminerror.png` |
-| Failed transaction 4| `screenshots/8_schemenameerror.png` |
-| Failed transaction 5| `screenshots/5_amounterror.png` |
+| Smart contract compilation | ![Compilation](screenshots/1_compile.png) |
+| Smart contract deployment | ![Compilation](screenshots/2_deploy.png) |
+| MetaMask wallet connection | ![Compilation](screenshots/3_walletconnected.png) |
+| Successful transaction | ![Compilation](screenshots/4_request.png) |
+| Failed transaction 1| ![Compilation](screenshots/5_farmernameerror.png) |
+| Failed transaction 2| ![Compilation](screenshots/6_requestexisterror.png) |
+| Failed transaction 3| ![Compilation](screenshots/7_onlyadminerror.png) |
+| Failed transaction 4| ![Compilation](screenshots/8_schemenameerror.png) |
+| Failed transaction 5| ![Compilation](screenshots/5_amounterror.png |
 
-Embed them like this: `![Compilation](screenshots/01_compile.png)`
 
 ## 10. Security note
 No private keys, seed phrases or passwords are stored in this repository. Only test accounts on Sepolia were used.
